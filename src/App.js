@@ -12,7 +12,7 @@ function App() {
           <input type='email' placeholder='Email'/>
           <label>Password</label>
           <input type="password" placeholder='Password'/>
-          <button type='submit'>Submit</button>
+          <button className="submit-btn" type='submit'>Submit</button>
         </div>
       </div>
     </div>
