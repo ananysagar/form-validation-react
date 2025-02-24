@@ -1,0 +1,28 @@
+* {
+  overflow: hidden;
+  margin: 0;
+}
+.App {
+  background: #bd5e5e;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {  
+  background: #665dc1;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
