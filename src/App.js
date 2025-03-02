@@ -12,8 +12,9 @@ function App() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const fieldName = e.target.name;
+    const fieldValue = e.target.value;
+    setFormData({ ...formData, [fieldName]: fieldValue });
   };
 
   const handleSubmit = (e) => {
@@ -21,15 +22,17 @@ function App() {
     const errors = validateForm(formData);
     setFormErrors(errors);
     setIsSubmit(true);
-    setFormData(initialValues)
+    
   };
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log("Form submitted successfully", formData);
       alert("Form submitted successfully");
+      setFormData(initialValues);
+      setIsSubmit(false)
     }
-  }, [formErrors, isSubmit, formData]);
+  }, [formErrors, isSubmit]);
 
   const validateForm = (values) => {
     const errors = {};
