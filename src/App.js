@@ -21,6 +21,7 @@ function App() {
     const errors = validateForm(formData);
     setFormErrors(errors);
     setIsSubmit(true);
+    setFormData(initialValues)
   };
 
   useEffect(() => {
